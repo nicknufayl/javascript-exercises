@@ -1,4 +1,12 @@
-const palindromes = function () {
+const palindromes = function (string) {
+processedString = string.toLowerCase().replace(/[^a-z]/g, ''); // replace all non-characters with blank space
+
+newString = processedString
+.split('')
+.reverse()
+.join('')
+
+return newString === processedString;
 
 };
 
